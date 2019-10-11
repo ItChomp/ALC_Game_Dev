@@ -6,12 +6,7 @@ public class DestroyOutOfBounds : MonoBehaviour
 {
 
     public float topBound = 30;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public float lowerBounds = -10f;
 
     // Update is called once per frame
     void Update()
@@ -20,5 +15,12 @@ public class DestroyOutOfBounds : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        else if (transform.position.z < lowerBounds)
+        {
+            Destroy(gameObject);
+        }
+
     }
+
 }
