@@ -548,6 +548,8 @@ MonoBehaviour:
   - {fileID: 4708259383830270790, guid: c3d90225c14db4c0c9f04dc87795a204, type: 3}
   spawnRangeX: 20
   spawnPosZ: 20
+  startDelay: 2
+  spawnInterval: 1.5
 --- !u!1 &1448417891 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100046, guid: 7b6675de545141649953fd8adec4561b,
@@ -629,6 +631,10 @@ PrefabInstance:
     - target: {fileID: 160438, guid: 7b6675de545141649953fd8adec4561b, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 13731972, guid: 7b6675de545141649953fd8adec4561b, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7b6675de545141649953fd8adec4561b, type: 3}
