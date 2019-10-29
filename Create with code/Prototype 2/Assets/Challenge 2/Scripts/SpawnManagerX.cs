@@ -11,17 +11,23 @@ public class SpawnManagerX : MonoBehaviour
     private float spawnPosY = 30;
 
     private float startDelay = 1.0f;
-    private float spawnInterval = 4.0f;
+    private float spawnInterval = 5.0f;
+
+    public float randomFloat = Random.Range(0, 100);
+
+    
 
     // Start is called before the first frame update
     void Start()
     {
         InvokeRepeating("SpawnRandomBall", startDelay, spawnInterval);
+
     }
 
     // Spawn random ball at random x position at top of play area
     void SpawnRandomBall ()
     {
+
         int ballIndex = Random.Range(0, ballPrefabs.Length);
 
         // Generate random ball index and random spawn position
