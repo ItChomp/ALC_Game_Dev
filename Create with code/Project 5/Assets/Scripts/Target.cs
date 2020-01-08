@@ -12,11 +12,14 @@ public class Target : MonoBehaviour
     private float ySpawnPos = -6;
     private Rigidbody targetRb;
     private GameManager gameManager;
+    public int pointValue;
+    public ParticleSystem explosionParticle;
 
     private void OnMouseDown()
     {
         Destroy(gameObject);
-        gameManager.UpdateScore(5);
+        Instantiate(explosionParticle, transform.position, explosionParticle.transform.rotation);
+        gameManager.UpdateScore(pointValue);
     }
 
     private void OnTriggerEnter(Collider other)
